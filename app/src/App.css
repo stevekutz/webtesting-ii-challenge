@@ -2,7 +2,7 @@
   border: 1px solid seagreen;
   text-align: center;
   margin : 0 auto;
-  width: 100%;
+  box-sizing: border-box;
 }
 
 .main-container{
@@ -12,7 +12,7 @@
 
 .stats{
   border: 1px solid blue;
-
+  width: 20%;
   padding: 5%;
   margin: 10%;
   text-align: right;
@@ -24,12 +24,16 @@ h3 {
 }
 
 .controlPanel{
-  border: 1px solid purple;
+  border: 5px solid purple;
   padding: 5%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
 }
 
 button {
   border: 1px solid dodgerblue;
+  width: 100%;
   margin: 5%;
   font-size: 20px;
   outline-style: none;
@@ -37,5 +41,7 @@ button {
 }
 
 button:active{
+  color: darkblue;
+  font-weight: bold;
   background: hotpink;
 }
