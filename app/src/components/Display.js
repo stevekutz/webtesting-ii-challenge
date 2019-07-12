@@ -31,8 +31,8 @@ class Display extends React.Component {
 
     render() {
         return (
-           <div>
-                <div>
+           <div className = "main-container">
+                <div className = "stats">
                     <h3> Strikes Total = {this.state.strikes}</h3>
                     <h3> Ball Total = {this.state.balls}</h3>
                 </div>    
