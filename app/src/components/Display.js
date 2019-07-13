@@ -28,10 +28,6 @@ class Display extends React.Component {
                fouls: 0,
            })
        }
-       
- 
-
-
     }
 
     handleBalls= () => {
@@ -89,17 +85,14 @@ class Display extends React.Component {
                     <h4> Hits Total = {this.state.hits}</h4>
                     <h5> Fouls Total = {this.state.fouls}</h5>
                 </div>    
-            
-           
-           
+                   
                 <Dashboard
                     handleStrikes = {this.handleStrikes}
                     handleBalls = {this.handleBalls}
                     handleHits = {this.handleHits}
                     handleFouls = {this.handleFouls}
                 />
-           
-           
+         
            </div> 
         )
     }

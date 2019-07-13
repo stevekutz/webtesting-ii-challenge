@@ -73,6 +73,7 @@ describe('<Display/>', () => {
 
         const ballsTotal = getByText(/Balls/);
         const strikesTotal = getByText(/Strikes/);
+        const foulsTotal = getByText(/Fouls/);
         const button_Ball = getByTestId("Ball");
         
         for(let i = 0; i < 4; ++i ) {
@@ -81,6 +82,7 @@ describe('<Display/>', () => {
 
         expect(ballsTotal).toHaveTextContent(/0/);
         expect(strikesTotal).toHaveTextContent(/0/);
+        expect(foulsTotal).toHaveTextContent(/0/);
 
     })
 
