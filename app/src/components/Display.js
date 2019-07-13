@@ -15,14 +15,17 @@ class Display extends React.Component {
     }
 
     handleStrikes = async () => {
-       if(this.state.strikes < 3) {
+       if(this.state.strikes< 2) {
         await this.setState({
                 ...this.state,
                 strikes: this.state.strikes + 1
-            })
+            })   
        } else {
+       //  alert('Your OUT !!');  // this breaks test
            this.setState({
                strikes: 0,
+               balls: 0,
+               fouls: 0,
            })
        }
        
@@ -33,7 +36,7 @@ class Display extends React.Component {
 
     handleBalls= () => {
         
-        if(this.state.balls < 4){
+        if(this.state.balls < 3){
             this.setState(prevState => {
                 return {balls: prevState.balls + 1}
             })
@@ -41,6 +44,7 @@ class Display extends React.Component {
             this.setState({
                 balls: 0,
                 strikes: 0,
+                fouls: 0,
             })
         }
 
