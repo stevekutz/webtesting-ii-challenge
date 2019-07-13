@@ -10,7 +10,7 @@ import DashBoard from './Dashboard';
 
 afterEach(rtl.cleanup);
 
-describe('verifies <DashBoard/>', () => {
+describe('verifies <DashBoard/> buttons are present', () => {
     it('Strike button present', () => {
         const {getByText, queryByText} = rtl.render(<DashBoard/>);
         const button_Strike = getByText(/Strike/);
@@ -55,5 +55,35 @@ describe('verifies <DashBoard/>', () => {
 
 
     })
-
 });
+
+describe('verifies <Dashboard> buttons fire', () => {
+    it('UGLY way to test >> Strike button fires', () => {
+        const testDOM = rtl.render(<DashBoard/>);
+     
+        const button_fires_Strikes = testDOM.getByText(/Strike/);
+        const button_Strike = rtl.fireEvent.click(button_fires_Strikes);
+    })
+
+    it('BETTER way to test >> verifies Ball button fires', () => {
+        const {getByText} = rtl.render(<DashBoard/>);
+        const button_fires_Ball = getByText(/Ball/);
+        rtl.fireEvent.click(button_fires_Ball);
+
+    })
+
+    it('BETTER way to test >> verifies Ball button fires', () => {
+        const {getByText} = rtl.render(<DashBoard/>);
+        const button_fires_Hit = getByText(/Hit/);
+        rtl.fireEvent.click(button_fires_Hit);
+
+    })    
+    
+    it('BETTER way to test >> verifies Ball button fires', () => {
+        const {getByText} = rtl.render(<DashBoard/>);
+        const button_fires_Foul = getByText(/Foul/);
+        rtl.fireEvent.click(button_fires_Foul);
+
+    }) 
+
+})
