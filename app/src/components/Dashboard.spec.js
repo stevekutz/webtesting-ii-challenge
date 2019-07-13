@@ -36,8 +36,8 @@ describe('verifies <DashBoard/> buttons are present', () => {
 
     it('Hits button present', () => {
         const {getByText, queryByText} = rtl.render(<DashBoard/>);
-        const button_Hits = getByText(/Hits/);
-        const button_hits = queryByText(/hits/);
+        const button_Hits = getByText(/Hit/);
+        const button_hits = queryByText(/hit/);
 
         expect(button_Hits).toBeTruthy();
         // expect(button_hits).not.toBeVisible(); // fails with value null
@@ -46,8 +46,8 @@ describe('verifies <DashBoard/> buttons are present', () => {
 
     it('Fouls button present', ()=> {
         const {getByText, queryByText} = rtl.render(<DashBoard/>);
-        const button_Fouls = getByText(/Fouls/);
-        const button_fouls = queryByText(/fouls/);
+        const button_Fouls = getByText(/Foul/);
+        const button_fouls = queryByText(/foul/);
 
         expect(button_Fouls).toBeInTheDocument();
         expect(button_fouls).not.toBeInTheDocument();

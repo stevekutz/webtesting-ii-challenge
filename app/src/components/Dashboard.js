@@ -7,10 +7,10 @@ class Dashboard extends React.Component {
         return (
            <div className = "controlPanel">
                 <h2>Dashboard</h2>    
-                <button onClick = {this.props.handleStrikes} > Strike </button>
-                <button onClick = {this.props.handleBalls}>Ball</button>
-                <button onClick = {this.props.handleHits}> Hits </button>
-                <button onClick = {this.props.handleFouls}> Fouls </button>
+                <button data-testid = "Strike"  onClick = {this.props.handleStrikes} > Strike </button>
+                <button data-testid = "Ball" onClick = {this.props.handleBalls}>Ball</button>
+                <button data-testid = "Hit" onClick = {this.props.handleHits}> Hit </button>
+                <button data-testid = "Foul" onClick = {this.props.handleFouls}> Foul </button>
               {/*  <button onClick = {() => this.props.handleFouls()}>Fouls</button>  BREAKS fireEvent  */}
            </div> 
         )

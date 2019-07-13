@@ -81,7 +81,7 @@ class Display extends React.Component {
            <div className = "main-container">
                 <div className = "stats">
                     <h3> Strikes Total = {this.state.strikes}</h3>
-                    <h3> Ball Total = {this.state.balls}</h3>
+                    <h3> Balls Total = {this.state.balls}</h3>
                     <h4> Hits Total = {this.state.hits}</h4>
                     <h5> Fouls Total = {this.state.fouls}</h5>
                 </div>    
