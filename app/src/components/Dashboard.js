@@ -6,6 +6,7 @@ class Dashboard extends React.Component {
     render() {
         return (
            <div className = "controlPanel">
+                <h2>Dashboard</h2>    
                 <button onClick = {this.props.handleStrikes} > Strike </button>
                 <button onClick = {this.props.handleBalls}>Ball</button>
                 <button onClick = {this.props.handleHits}> Hits </button>

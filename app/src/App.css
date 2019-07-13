@@ -7,14 +7,13 @@
 
 .main-container{
   display: flex;
-  
+  justify-content: space-around;
 }
 
 .stats{
   border: 1px solid blue;
   width: 20%;
   padding: 5%;
-  margin: 10%;
   text-align: right;
 }
 
